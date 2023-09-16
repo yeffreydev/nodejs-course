@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays: Lista</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(numeros);
+      console.log(numeros[3]);
+      console.log(numeros[7]);
+
+      let nombres = ["Juan", "Pedro", "Maria", "Pablo"];
+      console.log(nombres);
+      console.log(nombres[2]);
+      console.log(nombres[3]);
+
+      //propiedades
+      console.log(nombres.length);
+
+      //métodos
+      //agregar un nuevo elemento al final del array
+      nombres.push("Luis");
+      console.log(nombres);
+
+      //agregar un nuevo elemento al inicio del array
+      nombres.unshift("Luis");
+      console.log(nombres);
+
+      //eliminar el ultimo elemento del array
+      nombres.pop();
+      console.log(nombres);
+      nombres.pop();
+      console.log(nombres);
+
+      //eliminar el primer elemento del array
+      nombres.shift();
+      console.log(nombres);
+
+      //recorrer,
+      //filtrar.
+      //buscar.
+      //ordenar.
+    </script>
+  </body>
+</html>

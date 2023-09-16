@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Strings: Cadenas de texto</title>
+  </head>
+  <body>
+    <script>
+      /*
+        las variables, no pueden empezar por numero, se aplica la misma regla para las funciones y metodos
+        las variables no pueden tener espacio, se aplica la misma regla para las funciones y metodos
+        */
+      let cadenaTexto = "Hola Mundo"; //camelCase: primera palabra en minuscula, las siguientes palabras en mayuscula (las iniciales)
+
+      //la propiead length nos da la longitud de la cadena de texto. cuenta los caractares
+      console.log(cadenaTexto.length);
+
+      //acceder a un caracter de la cadena de texto
+      //las posiciones en JavaScript empiezan desde cero 0
+      console.log(cadenaTexto[5]); //M
+
+      //concatenar strings
+      let nombre = "Juan";
+      let apellido = "Perez";
+      let nombreCompleto = nombre + " " + apellido;
+      console.log(nombreCompleto);
+
+      //convertir a mayusculas
+      let stringMayuscula = nombreCompleto.toUpperCase();
+      console.log(stringMayuscula);
+
+      //convertir a minusculas
+
+      let stringMinuscula = nombreCompleto.toLowerCase();
+      console.log(stringMinuscula);
+
+      let finalizaConP = nombreCompleto.endsWith("ez");
+      console.log(finalizaConP);
+    </script>
+  </body>
+</html>

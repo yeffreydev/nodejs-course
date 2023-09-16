@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparadores Lógicos</title>
+  </head>
+  <body>
+    <script>
+      // && and
+      // || or
+      // ! not
+
+      //y and &&
+      let resultado = true && true; //true
+      //   console.log(resultado);
+      resultado = true && false; //false
+      //   console.log(resultado);
+      resultado = false && true; //false
+      //   console.log(resultado);
+
+      //o or ||
+      resultado = true || true; //true
+      //   console.log(resultado);
+      resultado = false || true; //true
+      resultado = true || false; //true
+      resultado = false || false; //false
+
+      //not !
+      resultado = !true; //false
+      //   console.log(resultado);
+      resultado = !false; //true
+      //   console.log(resultado);
+
+      resultado = !((true && false) || true);
+      console.log(resultado);
+    </script>
+  </body>
+</html>

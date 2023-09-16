@@ -1,0 +1,44 @@
+<script>
+  //   funcion simple
+  // function saludar() {
+  //   console.log("hola ");
+  //   let suma = 10 + 20;
+  //   console.log(suma);
+  // }
+
+  //   saludar();
+
+  //funcion con parametros
+  function saludar(nombre) {
+    console.log("hola " + nombre);
+  }
+
+  //argumentos que pide la funcion
+  //   saludar("Juan");
+  //   saludar("Pedro");
+  //   saludar("Maria");
+
+  //funcion sumar
+
+  function sumar(a, b) {
+    let resultado = a + b;
+    console.log(resultado);
+  }
+
+  //   sumar(10, 5);
+
+  //funciones con retorno
+  function restar(a, b) {
+    let resultado = a - b;
+    return resultado;
+  }
+  let resta1 = restar(5, 2);
+  let resta2 = restar(10, 5);
+
+  console.log(resta1 + resta2);
+
+  function mostrarMensaje() {
+    return "Hola Mundo";
+  }
+  console.log(mostrarMensaje());
+</script>

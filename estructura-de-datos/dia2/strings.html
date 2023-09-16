@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings - Estructura de datos con JavaScript</title>
+  </head>
+  <body>
+    <script>
+      let cadena = "ejemplo de texto    ";
+      console.log(cadena.length); //cantidad de caracteres
+
+      //para convertir a mayuscula
+      let cadenaM = cadena.toUpperCase();
+      console.log(cadenaM);
+      //convertir a miniscula
+      let cadenaMi = cadena.toLowerCase();
+      console.log(cadenaMi);
+
+      console.log(cadena);
+      let cadenaSinEspacios = cadena.trim();
+      console.log(cadenaSinEspacios);
+
+      //
+      console.log(cadena[1]);
+
+      //revetir un string
+      function revertirString(cadena) {
+        let nuevaCadena = "";
+        for (let i = cadena.length; i > 0; i--) {
+          nuevaCadena += cadena[i - 1];
+        }
+        return nuevaCadena;
+      }
+
+      console.log(revertirString("hola"));
+
+      //comprabar que una palabra sea palindromo
+      let palabra1 = "ala";
+
+      function comprabarPalindromo(palabra) {
+        return palabra === revertirString(palabra);
+      }
+
+      if (comprabarPalindromo("ala")) {
+        console.log("si es un palindromo");
+      } else {
+        console.log("no es un palindromo");
+      }
+    </script>
+  </body>
+</html>

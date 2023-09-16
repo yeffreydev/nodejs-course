@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busqueda</title>
+  </head>
+  <body>
+    <script>
+      const numeros = [0, 1, 2, 3, 4, 62, 20, 5, 9, 10];
+
+      function buscarNumero(n) {
+        for (let i = 0; i < numeros.length; i++) {
+          if (numeros[i] == n) {
+            console.log("se encontro el numero");
+            return;
+          }
+        }
+        console.log("no se encontro el numero");
+      }
+
+      function busquedaBinariaNumero(numeros, n) {
+        let inicio = 0;
+        let fin = numeros.length - 1;
+        let medio = Math.floor((inicio + fin) / 2);
+
+        while (inicio <= fin) {
+          if (numeros[medio] == n) {
+            console.log("se encontro el numero");
+            return;
+          } else if (numeros[medio] < n) {
+            inicio = medio + 1;
+          } else {
+            fin = medio - 1;
+          }
+          medio = Math.floor((inicio + fin) / 2);
+        }
+        console.log("no se encontro el numero");
+      }
+    </script>
+  </body>
+</html>

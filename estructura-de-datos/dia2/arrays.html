@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      const animales = ["perro", "gato", "tigre", "leon"];
+
+      //mostrar
+      //agregar
+      //actualizar
+      //eliminar
+
+      //mostrar un animal
+      console.log(animales[0]);
+
+      //agregar
+      animales.push("gepardo");
+      console.log(animales);
+
+      //cambiar mi animal gato
+      animales[1] = "caballo";
+      console.log(animales);
+
+      //eliminar un elemento
+      //eliminar ultimo
+      animales.pop();
+      console.log(animales);
+
+      //eliminar primer
+      animales.shift();
+      console.log(animales);
+
+      let nuevosAnimales = animales.filter((animal) => animal != "tigre");
+      console.log(nuevosAnimales);
+
+      //map //para iterar los animales y nos devuelve un neuvo array
+      let nuevosAnimales1 = animales.map(function (animal, i) {
+        return animal + " " + i;
+      });
+      console.log(nuevosAnimales1);
+
+      function pedirNombre(nombre, cb) {
+        let neuvoNombre = nombre + " 328934892";
+
+        cb(neuvoNombre); //ejecucion del callback
+      }
+
+      pedirNombre("pedro", function (nuevoNombre) {
+        console.log(nuevoNombre);
+      });
+    </script>
+  </body>
+</html>

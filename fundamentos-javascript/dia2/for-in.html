@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for - in</title>
+  </head>
+  <body>
+    <script>
+      const animal = {
+        nombre: "Perro",
+        edad: 10,
+        raza: "Aleman",
+      };
+
+      for (key in animal) {
+        console.log("la clave " + key + " tiene como valor " + animal[key]);
+      }
+
+      const clavesDeObjeto = Object.keys(animal);
+      for (let i = 0; i < clavesDeObjeto.length; i++) {
+        console.log("la clave " + clavesDeObjeto[i] + " tiene como valor " + animal[clavesDeObjeto[i]]);
+      }
+    </script>
+  </body>
+</html>

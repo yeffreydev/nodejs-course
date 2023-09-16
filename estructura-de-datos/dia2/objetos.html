@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let animal = {
+        nombre: "perro",
+        edad: 10,
+        raza: "aleman",
+      };
+
+      //mostra el valor de unan propiedad
+      console.log(animal.nombre);
+      console.log(animal["nombre"]);
+      //crear una nueva propieadad
+      animal.ladrar = function () {
+        console.log("Estoy ladrando");
+      };
+      animal.ladrar();
+      //actualizar
+      animal.edad = 12;
+      console.log(animal);
+
+      //eliminar una propiedad
+      delete animal.raza;
+      console.log(animal);
+
+      //recorrer
+      for (key in animal) {
+        if (typeof animal[key] !== "function") {
+          console.log(animal[key]);
+        }
+      }
+      animal.ladrar();
+    </script>
+  </body>
+</html>
