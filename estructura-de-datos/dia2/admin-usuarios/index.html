@@ -3,87 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Usuarios</title>
   </head>
   <body>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      th,
-      td,
-      table {
-        border: 1px solid black;
-      }
-      table {
-        width: 60%;
-        margin: auto;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        margin: auto;
-        align-items: center;
-      }
-      .cont-form {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-color: #0003;
-        top: 0;
-        left: 0;
-        display: none;
-      }
-      fieldset {
-        border: none;
-        display: flex;
-      }
-      #formulario_usuario {
-        position: relative;
-        width: max-content;
-        margin: auto;
-        background-color: #fff;
-        padding: 25px 15px 15px 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        border-radius: 10px;
-      }
-
-      .btn-cerrar-form {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #f00;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      .btn-submit-user {
-        background-color: #000;
-        color: #fff;
-        padding: 5px 10px;
-        margin: auto;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      input {
-        border: none;
-        border-bottom: 1px solid black;
-        outline: none;
-      }
-    </style>
     <div class="header">
       <h1>Usuarios</h1>
-      <button class="add-user">Agregar Usuario</button>
+      <button class="add-user">Nuevo Usuario</button>
     </div>
-    <table>
+    <table class="table-users">
       <thead>
         <tr>
           <th>Nombres</th>

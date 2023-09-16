@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let animales = ["perro", "gato", "tigre", "leon"];
+      function mostrarElementos(i) {
+        if (i == animales.length - 1) return console.log(animales[i]);
+        console.log(animales[i]);
+        mostrarElementos(i + 1);
+      }
+      mostrarElementos(0);
+
+      function mostrarElementosReverse(i) {
+        if (i == 0) return console.log(animales[0]);
+        console.log(animales[i]);
+        mostrarElementosReverse(i - 1);
+      }
+      mostrarElementosReverse(animales.length - 1);
+
+      //funcion para la factorial de un numero
+      //5 = 5*4*3*2*1
+
+      function factorial(n) {
+        if (n == 1) return n;
+        return factorial(n - 1) * n;
+      } //factorial de n
+
+      //funcion recursiva para el algoritmo de fibonacci
+    </script>
+  </body>
+</html>

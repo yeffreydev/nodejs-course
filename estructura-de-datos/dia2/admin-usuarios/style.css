@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+th,
+td,
+table {
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 20px 0;
+  margin: auto;
+  align-items: center;
+}
+
+.add-user {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+.table-users {
+  width: 95%;
+  margin: auto;
+  border: none;
+  display: grid;
+  overflow: auto;
+}
+
+@media (min-width: 767px) {
+  .header,
+  .table-users {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    width: 60%;
+  }
+  .table-users {
+    width: max-content;
+  }
+}
+
+.table-users thead {
+  background-color: #333;
+  color: #fff;
+}
+.table-users tr {
+  border-bottom: 1px solid #777;
+}
+
+.table-users tr th,
+.table-users tr td {
+  min-width: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+.table-users tr td {
+  height: 30px;
+}
+.table-users tr td:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.table-users tr td:last-child button:first-child,
+.table-users tr td:last-child button:last-child {
+  background-color: #3a3;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.table-users tr td:last-child button:last-child {
+  background-color: #f33;
+}
+.cont-form {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0003;
+  top: 0;
+  left: 0;
+  display: none;
+}
+fieldset {
+  border: none;
+  display: flex;
+}
+#formulario_usuario {
+  position: relative;
+  width: max-content;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+.btn-cerrar-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #f00;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-submit-user {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}

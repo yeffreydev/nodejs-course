@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let edad = prompt("Ingresa tu edad");
+
+      try {
+        edadEntero = parseInt(edad);
+
+        if (edadEntero.toString() == "NaN") {
+          //crear un nuevo error
+          throw new Error("edad no es un numero");
+        }
+        console.log(edadEntero);
+      } catch (e) {
+        console.log(e);
+      }
+      console.log("fin de ejecucion");
+    </script>
+  </body>
+</html>

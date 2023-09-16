@@ -72,18 +72,6 @@ formUser.addEventListener("submit", (e) => {
   cerrarFormulario();
 });
 
-function crearBtnEditar(dni) {
-  const btn = document.createElement("button");
-  btn.textContent = "Editar";
-  btn.className = "btn-editar-usuario";
-  btn.setAttribute("data-dni", dni);
-  btn.addEventListener("click", (e) => {
-    dniEditar = btn.getAttribute("data-dni");
-    mostrarFormulario();
-  });
-  return btn;
-}
-
 //componente fila de usuario
 const crearFilaUsuario = (usuario) => {
   const { nombres, apellidos, dni } = usuario;
@@ -97,7 +85,7 @@ const crearFilaUsuario = (usuario) => {
   dniCelda.innerText = dni;
   const accionesCol = document.createElement("td");
   accionesCol.appendChild(crearBtnEditar(dni));
-  accionesCol.appendChild(crearBtnEliminar());
+  accionesCol.appendChild(crearBtnEliminar(dni));
   fila.appendChild(nombresCelda);
   fila.appendChild(apellidosCelda);
   fila.appendChild(dniCelda);
@@ -105,15 +93,37 @@ const crearFilaUsuario = (usuario) => {
   return fila;
 };
 
-function crearBtnEliminar() {
-  const btnEliminar = document.createElement("button");
-  btnEliminar.innerText = "Eliminar";
-  btnEliminar.classList.add("eliminar-usuario");
+function crearBtn(dni, clase, texto, onclick) {
+  const btn = document.createElement("button");
+  btn.innerText = texto;
+  btn.className = clase;
+  btn.setAttribute("data-dni", dni);
+  btn.addEventListener("click", onclick);
+  return btn;
+}
+
+function eliminarUsuario(dni) {
+  const nuevosUsuarios = usuarios.filter((user) => user.dni !== dni);
+  usuarios = nuevosUsuarios;
+  mostrarUsuarios();
+}
+function crearBtnEliminar(dni) {
+  const btnEliminar = crearBtn(dni, "btn-eliminar-usuario", "Eliminar", () => eliminarUsuario(dni));
   return btnEliminar;
+}
+
+function editarUsuario(dni) {
+  dniEditar = dni;
+  mostrarFormulario();
+}
+function crearBtnEditar(dni) {
+  const btn = crearBtn(dni, "btn-editar-usuario", "Editar", () => editarUsuario(dni));
+  return btn;
 }
 
 const mostrarUsuarios = () => {
   dataUser.innerHTML = "";
+  if (!usuarios.length) return;
   usuarios.forEach((user) => {
     let fila = crearFilaUsuario(user);
     dataUser.appendChild(fila);

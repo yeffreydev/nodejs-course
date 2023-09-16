@@ -7,36 +7,53 @@
   </head>
   <body>
     <script>
-      const numeros = [0, 1, 2, 3, 4, 62, 20, 5, 9, 10];
+      let animales = ["perro", "gato", "lobo", "leon", "caballo", "tigre", "jirafa", "zorro"];
 
-      function buscarNumero(n) {
-        for (let i = 0; i < numeros.length; i++) {
-          if (numeros[i] == n) {
-            console.log("se encontro el numero");
+      function buscarAnimal(animalBuscar) {
+        for (let i = 0; i < animales.length; i++) {
+          const animalActual = animales[i];
+          if (animalActual === animalBuscar) {
+            console.log("animal si se encontro");
             return;
           }
         }
-        console.log("no se encontro el numero");
+        console.log("animal no se econtro");
       }
 
-      function busquedaBinariaNumero(numeros, n) {
+      //array ordenado, elementoBuscar
+      //dividir en 2 a nuestra lista
+      let numerosOrdenados = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      function busquedaBinaria(numero) {
         let inicio = 0;
-        let fin = numeros.length - 1;
-        let medio = Math.floor((inicio + fin) / 2);
+        let final = numerosOrdenados.length;
+        let tries = 1;
 
-        while (inicio <= fin) {
-          if (numeros[medio] == n) {
-            console.log("se encontro el numero");
-            return;
-          } else if (numeros[medio] < n) {
-            inicio = medio + 1;
-          } else {
-            fin = medio - 1;
+        while (inicio <= final) {
+          console.log("Numero de intentos ", tries);
+          let medio = Math.floor((inicio + final) / 2);
+
+          console.log("final es", final);
+          console.log("inicio es", inicio);
+          console.log(`buscando la posicion ${medio} cuando el valor es ${numerosOrdenados[medio]}`);
+          console.log("");
+
+          if (numero == numerosOrdenados[medio]) {
+            console.log("se encontro");
+            return true;
           }
-          medio = Math.floor((inicio + fin) / 2);
+          if (numerosOrdenados[medio] > numero) {
+            final = medio - 1;
+          } else {
+            inicio = medio + 1;
+          }
+          tries++;
         }
-        console.log("no se encontro el numero");
+        return false;
       }
+      busquedaBinaria(10);
+
+      //https://ichi.pro/es/usando-la-busqueda-binaria-en-javascript-85376316117487#:~:text=Usando%20la%20b%C3%BAsqueda%20binaria%20en%20JavaScript%201%20A,El%20tiempo%20de%20ejecuci%C3%B3n%20de%20b%C3%BAsqueda%20binaria%20
+      // https://tusconsejosrapidos.com/cual-es-la-complejidad-de-la-busqueda-binaria/
     </script>
   </body>
 </html>
