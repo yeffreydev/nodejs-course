@@ -1,0 +1,22 @@
+# DOM
+
+- [x] Que es el DOM?
+- [x] Acceder a los elementos del DOM
+- [x] Modificar los elementos del DOM
+- [x] Crear elementos del DOM (HTML, TEXTO)
+- [x] crear Atributos, eliminar atributos, obtenerlos su valor, actualizarlos
+- [x] modificar sus clases
+- [x] modificar sus id
+- [x] Eliminar elementos del DOM
+- [x] estilos de CSS
+- [x] Eventos
+- [x] Eventos del mouse
+- [x] Eventos del teclado
+- [x] Eventos del formulario
+- [x] Eventos de la ventana BOM
+- [ ] Proyecto TODO List
+  - [ ] formulario
+  - [ ] mostrar nuestra tareas
+  - [ ] actualizar las tareas
+  - [ ] eliminar las tareas
+- [ ] Agregando LocalStorage - BOM

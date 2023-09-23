@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .padre {
+        width: 500px;
+        height: 200px;
+        border: 1px solid red;
+      }
+      .hijo {
+        width: 70%;
+        height: 70%;
+        border: 1px solid blue;
+      }
+    </style>
+    <div class="padre">
+      <div class="hijo" onmouseover="mouseOver()" onclick="mouseClick()" onmouseout="mouseOut()" onmousemove="mouseMove()"></div>
+    </div>
+    <script>
+      function mouseOver() {
+        console.log("entrando al div");
+      }
+
+      function mouseOut() {
+        console.log("saliendo del div");
+      }
+
+      function mouseMove() {
+        console.log("moviendo el mouse");
+      }
+      function mouseClick() {
+        console.log("click");
+      }
+    </script>
+  </body>
+</html>
