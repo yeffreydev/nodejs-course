@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.lista-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tarea {
+  background-color: #dedede;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.tarea input[type="checkbox"] {
+  cursor: pointer;
+}
+.tarea div.cont-btn {
+  margin-left: auto;
+}
+
+.tarea:hover button.eliminar {
+  visibility: visible;
+}
+.tarea button.eliminar {
+  visibility: hidden;
+  background-color: red;
+  border-radius: 10px;
+  padding: 2px 5px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}

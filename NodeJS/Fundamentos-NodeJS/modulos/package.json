@@ -1,0 +1,19 @@
+{
+  "name": "modulos-node",
+  "version": "1.0.0",
+  "description": "ejemplo de modulos",
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yeffrey",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
