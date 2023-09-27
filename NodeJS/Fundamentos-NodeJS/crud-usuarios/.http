@@ -1,0 +1,21 @@
+GET http://localhost:3000/usuarios
+
+### post 
+POST http://localhost:3000/usuarios
+
+{
+    "hola": "hola"
+}
+### put
+PUT http://localhost:3000/usuarios
+
+{
+    "id": 3,
+    "nombre": "juan"
+}
+
+### delete
+DELETE  http://localhost:3000/usuarios/3
+
+### get
+GET http://localhost:3000/usuarios/3
