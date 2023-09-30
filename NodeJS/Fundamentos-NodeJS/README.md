@@ -23,9 +23,9 @@ Modulos de NodeJS.
 
 - [x] Creando un Servidor http con NodeJS,
 
-- [ ] creando una API Rest. nodejs nativo
-  - [ ] crear un usuario
-  - [ ] leer usuarios
-  - [ ] leer usuario
-  - [ ] actualizar usuario
-  - [ ] eliminar usuario
+- [x] creando una API Rest. nodejs nativo # reto del curso
+  - [x] crear un usuario
+  - [x] leer usuarios
+  - [x] leer usuario
+  - [x] actualizar usuario
+  - [x] eliminar usuario
