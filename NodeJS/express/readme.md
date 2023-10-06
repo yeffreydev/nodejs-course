@@ -13,4 +13,4 @@
 
 # parte 2 express
 
-- [ ] Proyecto de Usuarios en Express con Interfaz en HTML.
+- [x] Proyecto de Usuarios en Express con Interfaz en HTML.

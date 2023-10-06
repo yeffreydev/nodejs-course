@@ -16,6 +16,7 @@ const data = {
     return data.users;
   },
   updateUser(newUser) {
+    console.log(newUser);
     data.users = data.users.map((user) => {
       if (user.id == newUser.id) {
         user = newUser;

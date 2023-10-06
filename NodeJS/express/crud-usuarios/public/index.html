@@ -6,12 +6,128 @@
     <title>usuarios</title>
   </head>
   <body>
-    <h1>Crud de Usuarios</h1>
+    <style>
+      .main-head {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        align-items: center;
+      }
+      .new-user-btn {
+        padding: 5px 7px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .save-user {
+        padding: 5px 7px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* formulario  */
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+        gap: 10px;
+      }
+
+      /* tabla estilos  */
+      table {
+        display: grid;
+        width: 95%;
+        margin: 20px auto;
+        overflow: auto;
+      }
+      table tr {
+        border-bottom: 1px solid black;
+      }
+      .fila-user {
+        display: flex;
+        width: max-content;
+      }
+      table th {
+        min-width: 200px;
+        background-color: #000;
+        color: #fff;
+      }
+      table .celda-user {
+        min-width: 200px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+      table .celda-user-acciones {
+        min-width: 200px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        justify-content: center;
+        text-align: center;
+      }
+      .btn-editar-user {
+        background: #000;
+        color: cyan;
+      }
+      .btn-eliminar-user {
+        background-color: #000;
+        color: red;
+      }
+      @media (min-width: 767px) {
+        .main-head,
+        form {
+          width: 85%;
+        }
+      }
+      @media (min-width: 1200px) {
+        .main-head,
+        form {
+          width: 70%;
+        }
+      }
+    </style>
+    <div class="main-head">
+      <h1>Crud de Usuarios</h1>
+      <button class="new-user-btn">New User</button>
+    </div>
+    <!-- formularioa crear user  -->
+    <form>
+      <div>
+        <label for="username">Usuario</label>
+        <input id="username" type="text" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <div>
+        <button id="save" class="save-user" type="submit">Guardar</button>
+      </div>
+    </form>
+    <!-- mostrar tabla -->
     <table>
       <thead>
-        <th>username</th>
-        <th>email</th>
+        <tr>
+          <th>username</th>
+          <th>email</th>
+          <th>id</th>
+          <th>Acciones</th>
+        </tr>
       </thead>
+      <tbody class="data-users"></tbody>
     </table>
+
+    <script src="main.js"></script>
   </body>
 </html>
