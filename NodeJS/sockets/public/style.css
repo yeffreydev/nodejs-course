@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.login-page,
+.chat-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.chat-page {
+  display: none;
+  gap: 2px;
+}
+
+.chat-page .messages {
+  flex: 1;
+  overflow: auto;
+}
+.chat-page form {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding: 10px 0;
+}
+.chat-page form input {
+  flex: 1;
+}
+
+.login-page form {
+  width: max-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

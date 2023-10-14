@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <form id="login-form">
+        <div>
+          <input type="text" id="username" placeholder="username" />
+        </div>
+        <div>
+          <button id="submit-btn-login">Login</button>
+        </div>
+      </form>
+    </div>
+    <div class="chat-page">
+      <div class="messages"></div>
+      <form id="chat-form">
+        <input type="text" id="input-message" placeholder="write me..." />
+        <button>Send</button>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
